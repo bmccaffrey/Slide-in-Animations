@@ -13,4 +13,4 @@ function debounce(func, wait = 20, immediate = true) {
   };
 }
 
-console.log('hi');
+var images = document.querySelectorAll('img');
