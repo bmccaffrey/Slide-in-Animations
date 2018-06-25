@@ -14,3 +14,11 @@ function debounce(func, wait = 20, immediate = true) {
 }
 
 var images = document.querySelectorAll('img');
+
+function slideImages() {
+  images.forEach(img => {
+    if ( img.y <= 900 ) {
+      img.classList.add('active');
+    }
+  });
+}
