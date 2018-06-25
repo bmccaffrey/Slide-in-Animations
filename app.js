@@ -22,3 +22,5 @@ function slideImages() {
     }
   });
 }
+
+window.addEventListener( 'scroll', debounce( slideImages, 18 ));
