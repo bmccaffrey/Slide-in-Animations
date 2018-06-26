@@ -17,7 +17,12 @@ function debounce(func, wait = 20, immediate = true) {
 
 function slideImages() {
   images.forEach (img => {
-    if ( img.y <= 780 ) { img.classList.add( 'active' ); }
+    var viewportTop = window.scrollY;
+    var viewportBottom = ( viewportTop + window.innerHeight );
+    var imageTop = img.offsetTop;
+    var halfVisible = ( imageTop + ( img.height / 2 ) ); 
+    
+    if ( viewportBottom >= halfVisible ) { img.classList.add( 'active' ); }
     if ( img.y <= -img.height ) { img.classList.remove( 'active'); }
   });
 }
